@@ -447,18 +447,23 @@ ${midion}
 \book {
   \score {
     \unfoldRepeats \articulate <<
+      % instrument start voice
       \new Staff = "voice" <<
         \set Staff.instrumentName = \markup { "Voice" }
         \set Staff.shortInstrumentName = \markup { "V." }
         \set Staff.midiInstrument = "choir aahs"
         \voiceStaff
       >>
+      % instrument end voice
+      % instrument start cello
       \new Staff = "cello" <<
         \set Staff.instrumentName = \markup { "ViolonCello" }
         \set Staff.shortInstrumentName = \markup { "C." }
         \set Staff.midiInstrument = "cello"
         \cello
       >>
+      % instrument end cello
+      % instrument start piano
       \new PianoStaff = "piano" <<
         \new Staff {
           \set Staff.midiInstrument = "acoustic grand"
@@ -477,6 +482,7 @@ ${midion}
           >>
         }
       >>
+      % instrument end piano
     >>
     \midi {
       \context {
