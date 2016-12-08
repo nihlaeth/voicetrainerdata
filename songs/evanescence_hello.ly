@@ -3,8 +3,8 @@
 \include "predefined-guitar-fretboards.ly"
 \version "2.19.50"
 % voicetrainer: tempo = 72
-% voicetrainer: measures = 90
-% voicetrainer: pages = 6
+% voicetrainer: measures = 61
+% voicetrainer: pages = 5
 % ${pitch_noheight}
 \header {
   title = "Hello"
