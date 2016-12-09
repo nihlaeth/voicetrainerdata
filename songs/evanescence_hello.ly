@@ -483,6 +483,16 @@ ${midion}
         }
       >>
       % instrument end piano
+      % instrument start metronome
+      \new DrumStaff {
+        \drummode {
+          \global
+          \repeat unfold 61 {
+            hiwoodblock4 lowoodblock wbl wbl
+          }
+        }
+      }
+      % instrument end metronome
     >>
     \midi {
       \context {
