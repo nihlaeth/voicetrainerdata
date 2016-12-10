@@ -4,7 +4,7 @@
 
 \header {
 }
-${sheeton}
+% sheetonly start
 global= {
   \time 4/4
 }
@@ -50,8 +50,8 @@ exercise = {
     scoreTitleMarkup = ##f
   }
 }
-${sheetoff}
-${midion}
+% sheetonly end
+% midionly start
 global= {
   \tempo 4=${tempo} \time 4/4
 }
@@ -79,4 +79,4 @@ exercise = {
     }
   }
 }
-${midioff}
+% midionly end
