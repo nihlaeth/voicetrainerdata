@@ -12,27 +12,26 @@
 
 voicetrainerTempo = 72
 voicetrainerKey = b,
-voicetrainerOrigKey = b,
 
 global= {
   \tempo 4=\voicetrainerTempo \time 4/4 \key b \minor
 }
 
-voiceStaff= \transpose \voicetrainerOrigKey \voicetrainerKey \relative c' {
+voiceStaff= \transpose b, \voicetrainerKey \relative c' {
   \override NoteHead #'color = #color-notehead
   \global
 }
 
-cello= \transpose \voicetrainerOrigKey \voicetrainerKey \relative c, {
+cello= \transpose b, \voicetrainerKey \relative c, {
   \global
   \clef bass
 }
 
-upperStaff= \transpose \voicetrainerOrigKey \voicetrainerKey \relative c' {
+upperStaff= \transpose b, \voicetrainerKey \relative c' {
   \global
 }
 
-lowerStaff= \transpose \voicetrainerOrigKey \voicetrainerKey \relative c {
+lowerStaff= \transpose b, \voicetrainerKey \relative c {
   \global
   \clef bass
 }
@@ -45,6 +44,8 @@ pianoPedal = {
 }
 
 myChords= \chordmode {
+  \transpose b, \voicetrainerKey {
+  }
 }
 
 % sheetonly start

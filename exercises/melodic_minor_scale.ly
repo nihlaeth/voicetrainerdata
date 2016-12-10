@@ -7,7 +7,6 @@
 
 voicetrainerTempo = 140
 voicetrainerKey = c
-voicetrainerKeyNoOctave = c
 voicetrainerSound = "Mi"
 
 % sheetonly start
@@ -29,7 +28,7 @@ exercise = {
 \book {
   \score {
     <<
-      \new ChordNames { \chordmode { \voicetrainerKeyNoOctave }}
+      \new ChordNames { \chordmode { \transpose c \voicetrainerKey { c }}}
       \new Staff = "voice" <<
         \global
         \exercise
