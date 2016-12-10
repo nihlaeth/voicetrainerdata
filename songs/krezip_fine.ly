@@ -4,6 +4,9 @@
 \version "2.19.50"
 % voicetrainer: measures = 117
 % voicetrainer: pages = 6
+
+% TODO: add dynamics
+
 \header {
   title = "Fine"
   composer = "Krezip"
@@ -346,12 +349,9 @@ uthemea = \relative c' {
 
 uthemeb = \relative c' {
   <<
-    {
-      c2
-    } \\ {
-      as'4 g
-    }
-  >>
+    { \voiceTwo c2 }
+    \new Voice { \voiceOne as'4-\tag midi \sustainOn g }
+  >> \oneVoice
   es4 c |
 }
 
@@ -380,19 +380,28 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
 
   \barNumberCheck #23
   % and I feel fine yeah
-  << { < f as>1 } \\ { c2. c8 as } >>
+  <<
+    { \voiceOne < f as>1 }
+    \new Voice { \voiceTwo c2.-\tag midi \sustainOn c8 as }
+  >> \oneVoice
   < as des es g >2~ < as des es g>8 as des as |
   < as bes des>4 as bes es |
   bes es as, < bes es> |
 
   % I feel fine yeah
-  << { c1 } \\ { < f as>4 as8 g f es4. } >> |
+  <<
+    { \voiceTwo c1 }
+    \new Voice { \voiceOne < f as>4-\tag midi \sustainOn as8 g f es4. }
+  >> \oneVoice |
   < as, c>1 |
   < as c es> |
   < c es>4 < as c es> < as c es> < as des es> |
 
   % take my hand, just be careful with it
-  << { < f' as>1 } \\ { c4. f, c'8 as } >> |
+  <<
+    { \voiceOne < f' as>1 }
+    \new Voice { \voiceTwo c4.-\tag midi \sustainOn f, c'8 as }
+  >> \oneVoice |
   < as des es g>1 |
   < as c es> |
   bes4 es bes as |
@@ -428,34 +437,55 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
 
   \barNumberCheck #51
   % I hope you don't really think that I'm better off without you
-  << { c2. c4 } \\ { < f as>1 } >> |
-  << { bes,2.~ < bes c>4 } \\ { < es g>2..~ < es g>8 } >> |
+  <<
+    { \voiceTwo c2. c4 }
+    \new Voice { \voiceOne < f as>1-\tag midi \sustainOn }
+  >> \oneVoice |
+  <<
+    { \voiceTwo bes,2.~ < bes c>4 }
+    \new Voice { \voiceOne < es g>2..~-\tag midi \sustainOn < es g>8 }
+  >> \oneVoice |
   \uthemeb
-  << { < g, bes f'>1 } \\ { r2.. as8 } >> |
+  <<
+    { \voiceTwo < g, bes f'>1 }
+    \new Voice { \voiceOne r2..-\tag midi \sustainOn as8 }
+  >> \oneVoice |
   < f as>8 r8 f des' des f4 es8~ |
   es4 f as bes |
 
   % and if feel fine yeah
-  << { c,2. c8 as } \\ { < f' as >1 } >> |
+  <<
+    { \voiceTwo c,2. c8 as }
+    \new Voice { \voiceOne < f' as >1-\tag midi \sustainOn }
+  >> \oneVoice |
   < as, des es g>2~ < as des es g>8 as des as |
   < as bes es>4 as bes es |
   bes es as, < bes es> |
 
   % I feel fine no
-  << { c1 } \\ { < f as>4 as8 g f es4. } >> |
+  <<
+    { \voiceTwo c1 }
+    \new Voice { \voiceOne < f as>4-\tag midi \sustainOn as8 g f es4. }
+  >> \oneVoice |
   < as, c>1 |
   < as c es> |
   < c es>4 < as c es> < as c es> < as des es> |
 
 
   % take my hand, just be careful with it
-  << { < f' as>1 } \\ { c4. f, c'8 as } >> |
+  <<
+    { \voiceOne < f' as>1 }
+    \new Voice { \voiceTwo c4.-\tag midi \sustainOn f, c'8 as }
+  >> \oneVoice |
   < c des es g>1 |
   < as c es> |
   bes4 es bes as |
 
   % I feel fine
-  << { c1 } \\ { < f as>4 as8 g f es4. } >> |
+  <<
+    { \voiceTwo c1 }
+    \new Voice { \voiceOne < f as>4-\tag midi \sustainOn as8 g f es4. }
+  >> \oneVoice |
   < f as>1 |
   < as, des es>4 < as des es> < as des es> < as des es> |
   < as des es> < as des es> < as des es> < as des es> |
@@ -465,7 +495,10 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   % no not to be with you at all
   < f as des>2.. f16 as |
   c8 f g as4 g8 es des |
-  << { < f, as des>1 } \\ { r2. es'4 } >> |
+  <<
+    { \voiceTwo < f, as des>1 }
+    \new Voice { \voiceOne r2.-\tag midi \sustainOn es'4 }
+  >> \oneVoice |
   < as, c>2 g'4 as |
 
   % but I haven't got a clue
@@ -473,8 +506,14 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   < c~ f g~>4. < c f~ g~> < c f g >4 |
 
   % if I'm handling this right no
-  << { < es, g bes>1 } \\ { r4 es'8 bes' r2 } >> |
-  << { < es,, g>1 } \\ { bes'8 es bes bes' r4 es,4 } >> |
+  <<
+    { \voiceTwo < es, g bes>1 }
+    \new Voice { \voiceOne r4-\tag midi \sustainOn es'8 bes' r2 }
+  >> \oneVoice |
+  <<
+    { \voiceTwo < es,, g>1 }
+    \new Voice { \voiceOne bes'8-\tag midi \sustainOn es bes bes' r4 es,4 }
+  >> \oneVoice |
 
   % you give me everything I want
   \repeat unfold 4 < des es f as>4 |
@@ -494,13 +533,25 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
 
   \barNumberCheck #91
   % I feel fine
-  << { f'1 } \\ { < c' f as>2. c4 } >> |
-  << { < des es g>1 } \\ { as4. as4 des8 as' es } >> |
-  << { as,4 as2. } \\ { < c es>2. es4 } >> |
+  <<
+    { \voiceTwo f'1 }
+    \new Voice { \voiceOne < c' f as>2.-\tag midi \sustainOn c4 }
+  >> \oneVoice |
+  <<
+    { \voiceOne < des es g>1 }
+    \new Voice { \voiceTwo as4.-\tag midi \sustainOn as4 des8 as' es }
+  >> \oneVoice |
+  <<
+    { \voiceOne as,4 as2. }
+    \new Voice { \voiceTwo < c es>2.-\tag midi \sustainOn es4 }
+  >> \oneVoice |
   es,4 bes' es8 es, as es |
 
   % I feel fine
-  << { f1 } \\ { r8 c'8 as' g f es4 bes8 } >> |
+  <<
+    { \voiceTwo f1 }
+    \new Voice { \voiceOne r8-\tag midi \sustainOn c'8 as' g f es4 bes8 }
+  >> \oneVoice |
   % bes8 - ties don't work over polyphonic splits
   r8 c4. c2 |
   < as, c es>1 |
@@ -513,7 +564,11 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   as, bes < as bes es> < as bes es> |
 
   % I feel fine
-  r4 << { < c f >4 } \\ { as'8 g } >> f es r8 < f, as bes>8~ |
+  r4
+  <<
+    { \voiceTwo < c f >4 }
+    \new Voice { \voiceOne as'8-\tag midi \sustainOn g }
+  >> \oneVoice f es r8 < f, as bes>8~ |
   < f as bes>2~ < f as bes>8 < as des>4 < as bes es>8~ |
   \repeat unfold 8 < as bes es>4 |
 
@@ -525,13 +580,20 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   as bes < as bes es> < as bes es> |
 
   % I feel fine
-  << { < c f>4 } \\ { as'8 g } >> f es4 c as'8 |
+  <<
+    { \voiceTwo < c f>4 }
+    \new Voice { \voiceOne as'8-\tag midi \sustainOn g }
+  >> \oneVoice f es4 c as'8 |
   as4. g f8 < as, c es>8~ |
   < as c es>4 as bes es |
 
   % I feel fine
   as, bes es8 as, bes as |
-  r4 << { < c f>4 } \\ { as'8 g } >> f es as, bes |
+  r4
+  <<
+    { \voiceTwo < c f>4 }
+    \new Voice { \voiceOne as'8-\tag midi \sustainOn g }
+  >> \oneVoice f es as, bes |
   r1 |
   r1 \bar "|."
 }
@@ -557,10 +619,13 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
 
   % don't you see I'm weaker with you
   f1 |
-  << { des } \\ { r2 r8 des' r4 } >> |
+  <<
+    { \voiceTwo des }
+    \new Voice { \voiceOne r2-\tag midi \sustainOn r8 des r4 }
+  >> \oneVoice |
 
   % I hope you don't really think that I'm better off without you
-  f,1 |
+  f1 |
   es |
   f |
   es |
@@ -568,22 +633,34 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   r1 |
 
   % and I feel fine yeah
-  << { f1 } \\ { f'4. f4 f8 r4 } >> |
+  <<
+    { \voiceTwo f1 }
+    \new Voice { \voiceOne f'4.-\tag midi \sustainOn f4 f8 r4 }
+  >> \oneVoice |
   des,1 |
   as'8 as4 as as as8~ |
   as8 as4 as as as8 |
 
   % I feel fine yeah
   f1 |
-  << { des1 } \\ { des'2. des4 } >> |
+  <<
+    { \voiceTwo des1 }
+    \new Voice { \voiceOne des'2.-\tag midi \sustainOn des4 }
+  >> \oneVoice |
   c,1 |
   r8 c4 c c c8 |
 
   \barNumberCheck #31
   % Take my hand, just be careful with it
   f1 |
-  << { des1 } \\ { des'4. es f4 } >> |
-  << { as,,2~ as8 as4 as8 } \\ { r4. es''4. as4 } >> |
+  <<
+    { \voiceTwo des1 }
+    \new Voice { \voiceOne des'4.-\tag midi \sustainOn es f4 }
+  >> \oneVoice |
+  <<
+    { \voiceTwo as,,2~ as8 as4 as8 }
+    \new Voice { \voiceOne r4.-\tag midi \sustainOn es''4. as4 }
+  >> \oneVoice |
   % as,,8 tie doesn't work over polyphonic split
   r8 as,,4 as as as8 |
 
@@ -613,7 +690,10 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
 
   % don't you see I'm weaker with you?
   f1 |
-  << { des1 } \\ { r4. as'4. des4 } >> |
+  <<
+    { \voiceTwo des1 }
+    \new Voice { \voiceOne r4.-\tag midi \sustainOn as'4. des4 }
+  >> \oneVoice |
 
 
   \barNumberCheck #51
@@ -626,21 +706,33 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   r1 |
 
   % and I feel fine yeah
-  << { f1 } \\ { f'4. f4 f8 r4 } >> |
+  <<
+    { \voiceTwo f1 }
+    \new Voice { \voiceOne f'4.-\tag midi \sustainOn f4 f8 r4 }
+  >> \oneVoice |
   des,1 |
   as'8 as4 as as as8~ |
   as8 as4 as as as8 |
 
   % I feel fine no
   f1 |
-  << { des1 } \\ { des'2. des4 } >> |
+  <<
+    { \voiceTwo des1 }
+    \new Voice { \voiceOne des'2.-\tag midi \sustainOn des4 }
+  >> \oneVoice |
   c,1 |
   r8 c4 c c c8 |
 
   % take my hand, just be careful with it
   f1 |
-  << { des } \\ { des'4. es f4 } >> |
-  << { as,,2~ as8 as4 as8 } \\ { r4. es''4. as4 } >> |
+  <<
+    { \voiceTwo des }
+    \new Voice { \voiceOne des'4.-\tag midi \sustainOn es f4 }
+  >> \oneVoice |
+  <<
+    { \voiceTwo as,,2~ as8 as4 as8 }
+    \new Voice { \voiceOne r4.-\tag midi \sustainOn es''4. as4 }
+  >> \oneVoice |
   % as8 - ties don't work over plyphone splits
   r8 as,,4 as4 as4 as8 |
 
@@ -691,27 +783,48 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   as,2 as4 as |
 
   % Take my hand, just be careful with it
-  << { f1 } \\ { < c' f~>4. < c f>8~ < c f>2 } >> |
-  << { as1 } \\ { des4 des8 es4 f4. } >> |
-  << { as,1 } \\ { as,8 as4 as as as8 } >> |
+  <<
+    { \voiceTwo f1 }
+    \new Voice { \voiceOne < c' f~>4.-\tag midi \sustainOn < c f>8~ < c f>2 }
+  >> \oneVoice |
+  <<
+    { \voiceTwo as1 }
+    \new Voice { \voiceOne des4-\tag midi \sustainOn des8 es4 f4. }
+  >> \oneVoice |
+  <<
+    { \voiceOne as,1 }
+    \new Voice { \voiceTwo as,8-\tag midi \sustainOn as4 as as as8 }
+  >> \oneVoice |
   as8 as4 as as as'16 g |
 
   % I feel fine
   f8 c' r2. |
   des,1 |
-  << { as1 } \\ { as'4. as4 as es8 } >> |
+  <<
+    { \voiceTwo as1 }
+    \new Voice { \voiceOne as'4.-\tag midi \sustainOn as4 as es8 }
+  >> \oneVoice |
   as8 as4 as as es8 |
 
   \barNumberCheck #107
   % Take my hand, cause I trust you with it
-  << { f1 } \\ { r2 c'4 c } >> |
-  << { des,1 } \\ { r2 as'4 as } >> |
+  <<
+    { \voiceTwo f1 }
+    \new Voice { \voiceOne r2-\tag midi \sustainOn c'4 c }
+  >> \oneVoice |
+  <<
+    { \voiceTwo des,1 }
+    \new Voice { \voiceOne r2-\tag midi \sustainOn as'4 as }
+  >> \oneVoice |
   as4. es8 as4. as8~ |
   as8 as4 as es8 as es |
 
   % I feel fine
   f2 c' |
-  << { des,1 } \\ { r4 es'4 f g } >> |
+  <<
+    { \voiceTwo des,1 }
+    \new Voice { \voiceOne r4-\tag midi \sustainOn es'4 f g }
+  >> \oneVoice |
   as,4. as8~ as2 |
 
   % I feel fine
