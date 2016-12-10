@@ -23,6 +23,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   \clef tenor
   r1 | r | r | r
 
+  \barNumberCheck #5
   % Held the door for me
   r4 f,8 f as8. c g8~ |
   % You make sure I'm fine yeah
@@ -30,6 +31,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   c4( des8 bes4. as8 bes~ |
   bes) c4. r2 |
 
+  \barNumberCheck #9
   % Hold my hand all day, no you would not have cared
   % You'd just be thankful to
   r4 c8 c f g4 as8( |
@@ -37,6 +39,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   c4.) bes8 c bes( as) bes~ |
   bes bes4 c8( bes4) r8 bes |
 
+  \barNumberCheck #13
   % but do you feel you've won
   as'4 g es c8( es~ |
   es) es4. r2 |
@@ -45,6 +48,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   as4 g es8( c) c4 |
   f4. bes,8 bes as4. |
 
+  \barNumberCheck #17
   % I hope you don't really think that I'm better off without you
   as'8 c,4 c8 c c4 as'8~ |
   as g( f es8~ es2 ) |
@@ -54,6 +58,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
 
   r2.. as8 |
 
+  \barNumberCheck #23
   % and I feel fine yeah
   as'1 |
   g2~ g8 r4 es8~ |
@@ -81,6 +86,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
 
   % start cello
 
+  \barNumberCheck #39
   % will you stick with me? you're right if you don't
   r4 f8 f as8. c8. g8~ |
   g4  r8 es8 as as bes c~ |
@@ -101,6 +107,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   as4 g es8( c) c4 |
   f4. bes,8 bes as4. |
 
+  \barNumberCheck #51
   % I hope you don't really think, that I'm better off without you yeah
   as'8 c,4 c8 c c4 as'8~ |
   as g( f es8~ es2) |
@@ -115,6 +122,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   es4 r2 r8 es8~ |
   es8( c bes as4) r4. |
 
+  \barNumberCheck #61
   % I feel fine no
   r4 as'8( g f es4 bes8~ |
   bes c4) r4 des8( c8) c8( |
@@ -134,6 +142,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
 
   r1 |
 
+  \barNumberCheck #73
   % and i decided not to be
   r2 as'8 as4 c,8~ |
   c bes4 as bes c8~ |
@@ -154,6 +163,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   c des c bes( as4) g8( as~ |
   as4) r4
 
+  \barNumberCheck #81
   % you give me everything I want
   as'8 as4 g8~ |
   g as4 g8( es4) es8 es~ |
@@ -178,6 +188,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
 
   r1 |
 
+  \barNumberCheck #91
   % i feel fine
   as'1 |
   g2. r8 es8~ |
@@ -202,6 +213,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   bes as2) r4. |
   c8( des c2.) |
 
+  \barNumberCheck #107
   % take my hand, 'cause I trust you with it
   as'1 |
   g2. r4 |
@@ -225,6 +237,7 @@ cello= \transpose f, \voicetrainerKey \relative c, {
   \clef bass
   \repeat unfold 38 r1 |
 
+  \barNumberCheck #39
   % Will you stick with me? You're right if you don't
   f1 | es | f | es |
 
@@ -240,6 +253,7 @@ cello= \transpose f, \voicetrainerKey \relative c, {
   % I hope you don't really think, that I'm better off without you yeah
   f | es | f | es | des | des |
 
+  \barNumberCheck #57
   % I feel fine yeah
   \clef tenor f''1 |
   es2. r8 c8~ |
@@ -271,6 +285,7 @@ cello= \transpose f, \voicetrainerKey \relative c, {
   % if I'm handing this right no
   \repeat unfold 8 r1
 
+  \barNumberCheck #81
   % you give me everything I want
   r2 f'8 f4 es8~ |
   es f4 es8 c4 c8 as~ |
@@ -294,6 +309,7 @@ cello= \transpose f, \voicetrainerKey \relative c, {
   % I feel fine
   \repeat unfold 8 r1 |
 
+  \barNumberCheck #99
   % take my hand just be careful with it
   f1 |
   es2. r4 |
@@ -345,6 +361,7 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   % You make sure I'm fine yeah
   \repeat unfold 3 \uthemea
 
+  \barNumberCheck #13
   % but do you feel you've won
   \uthemeb
   es2~ es8 r es r |
@@ -361,6 +378,7 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   r4 f8 des'4 f es8~ |
   es4 f as bes |
 
+  \barNumberCheck #23
   % and I feel fine yeah
   << { < f as>1 } \\ { c2. c8 as } >>
   < as des es g >2~ < as des es g>8 as des as |
@@ -387,6 +405,7 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
 
   % start cello
 
+  \barNumberCheck #39
   % will you stick with me? you're right if you don't
   < c, f g>1 |
   < bes es f> |
@@ -407,6 +426,7 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   \uthemeb
   < as, des f>1 |
 
+  \barNumberCheck #51
   % I hope you don't really think that I'm better off without you
   << { c2. c4 } \\ { < f as>1 } >> |
   << { bes,2.~ < bes c>4 } \\ { < es g>2..~ < es g>8 } >> |
@@ -440,6 +460,7 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   < as, des es>4 < as des es> < as des es> < as des es> |
   < as des es> < as des es> < as des es> < as des es> |
 
+  \barNumberCheck #73
   % and I decided not to be
   % no not to be with you at all
   < f as des>2.. f16 as |
@@ -471,6 +492,7 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   % why I can't be with you no
   \repeat unfold 4 r1 |
 
+  \barNumberCheck #91
   % I feel fine
   << { f'1 } \\ { < c' f as>2. c4 } >> |
   << { < des es g>1 } \\ { as4. as4 des8 as' es } >> |
@@ -495,6 +517,7 @@ upperStaff= \transpose f, \voicetrainerKey \relative c' {
   < f as bes>2~ < f as bes>8 < as des>4 < as bes es>8~ |
   \repeat unfold 8 < as bes es>4 |
 
+  \barNumberCheck #107
   % Take my hand, cause I trust you with it
   < c f as>8 g' f es4 < f as>4. |
   < des f as>8 g f es4 bes < as c es>8~ |
@@ -527,6 +550,7 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   % You make sure I'm fine yeah
   \repeat unfold 3 \lthemea
 
+  \barNumberCheck #13
   % but do you feel you've won
   f |
   < es' g>2~ < es g>8 es, r8 bes' |
@@ -555,6 +579,7 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   c,1 |
   r8 c4 c c c8 |
 
+  \barNumberCheck #31
   % Take my hand, just be careful with it
   f1 |
   << { des1 } \\ { des'4. es f4 } >> |
@@ -591,6 +616,7 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   << { des1 } \\ { r4. as'4. des4 } >> |
 
 
+  \barNumberCheck #51
   % I hope you don't really think that I'm better off withont you
   f,1 |
   es |
@@ -624,6 +650,7 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   r8 es4 es es es8~ |
   es es4 es4 es4 es8 |
 
+  \barNumberCheck #73
   % and I decided not to be, no not to be with you at all
   des,1 |
   f' |
@@ -651,6 +678,7 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   < des des'>~ |
   < des des'> |
 
+  \barNumberCheck #91
   % I feel fine
   r1 | r |
   as''~ |
@@ -674,6 +702,7 @@ lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   << { as1 } \\ { as'4. as4 as es8 } >> |
   as8 as4 as as es8 |
 
+  \barNumberCheck #107
   % Take my hand, cause I trust you with it
   << { f1 } \\ { r2 c'4 c } >> |
   << { des,1 } \\ { r2 as'4 as } >> |
