@@ -15,7 +15,7 @@ exercise = {
     \key c \minor
     < c es g >1\sustainOn |
     c4( d es f g a b c
-    bes as g f es d c)
+    bes as g f es d c2)
     \bar "|."
   }
 }
@@ -61,7 +61,7 @@ exercise = {
     \key c \minor
     < c es g >1\sustainOn |
     c4( d es f g a b c
-    bes as g f es d c)
+    bes as g f es d c2)
     \bar "|."
   }
 }
