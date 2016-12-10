@@ -379,7 +379,7 @@ pianoPedal = {
 myChords= \chordmode {
 }
 
-${sheeton}
+% sheetonly start
 \book {
   \score {
     <<
@@ -442,8 +442,8 @@ ${sheeton}
     }
   }
 }
-${sheetoff}
-${midion}
+% sheetonly end
+% midionly start
 \book {
   \score {
     \unfoldRepeats \articulate <<
@@ -508,4 +508,4 @@ ${midion}
     }
   }
 }
-${midioff}
+% midionly end
