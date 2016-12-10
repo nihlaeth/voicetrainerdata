@@ -2,35 +2,37 @@
 \include "color-pitch.ly"
 \include "predefined-guitar-fretboards.ly"
 \version "2.19.50"
-% voicetrainer: tempo = 72
 % voicetrainer: measures = 61
 % voicetrainer: pages = 5
-% ${pitch_noheight}
 \header {
   title = "Title"
   composer = "Artist"
   arranger = "arranged by: Tamara van Haarlem"
 }
 
+voicetrainerTempo = 72
+voicetrainerKey = b,
+voicetrainerOrigKey = b,
+
 global= {
-  \tempo 4=${tempo} \time 4/4 \key b \minor
+  \tempo 4=\voicetrainerTempo \time 4/4 \key b \minor
 }
 
-voiceStaff= \transpose b, ${pitch} \relative c' {
+voiceStaff= \transpose \voicetrainerOrigKey \voicetrainerKey \relative c' {
   \override NoteHead #'color = #color-notehead
   \global
 }
 
-cello= \transpose b, ${pitch} \relative c, {
+cello= \transpose \voicetrainerOrigKey \voicetrainerKey \relative c, {
   \global
   \clef bass
 }
 
-upperStaff= \transpose b, ${pitch} \relative c' {
+upperStaff= \transpose \voicetrainerOrigKey \voicetrainerKey \relative c' {
   \global
 }
 
-lowerStaff= \transpose b, ${pitch} \relative c {
+lowerStaff= \transpose \voicetrainerOrigKey \voicetrainerKey \relative c {
   \global
   \clef bass
 }

@@ -2,21 +2,22 @@
 \include "color-pitch.ly"
 \include "predefined-guitar-fretboards.ly"
 \version "2.19.50"
-% voicetrainer: tempo = 108
-% voicetrainer: measures = 61
+% voicetrainer: measures = 117
 % voicetrainer: pages = 6
-% ${pitch_noheight}
 \header {
   title = "Fine"
   composer = "Krezip"
   arranger = "arranged by: Tamara van Haarlem"
 }
 
+voicetrainerTempo = 108
+voicetrainerKey = f,
+
 global= {
-  \tempo 4=${tempo} \time 4/4 \key f \minor
+  \tempo 4=\voicetrainerTempo \time 4/4 \key f \minor
 }
 
-voiceStaff= \transpose f, ${pitch} \relative c' {
+voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   \override NoteHead #'color = #color-notehead
   \global
   \clef tenor
@@ -219,7 +220,7 @@ voiceStaff= \transpose f, ${pitch} \relative c' {
   es,1 \bar "|."
 }
 
-cello= \transpose f, ${pitch} \relative c, {
+cello= \transpose f, \voicetrainerKey \relative c, {
   \global
   \clef bass
   \repeat unfold 38 r1 |
@@ -321,7 +322,7 @@ cello= \transpose f, ${pitch} \relative c, {
 }
 
 uthemea = \relative c' {
-  < c f g>1\sustainOn |
+  < c f g>1 |
   < es f bes> |
   r8 c f g bes es as, g |
   f1 |
@@ -338,7 +339,7 @@ uthemeb = \relative c' {
   es4 c |
 }
 
-upperStaff= \transpose f, ${pitch} \relative c' {
+upperStaff= \transpose f, \voicetrainerKey \relative c' {
   \global
   % Held the door for me
   % You make sure I'm fine yeah
@@ -513,13 +514,13 @@ upperStaff= \transpose f, ${pitch} \relative c' {
 }
 
 lthemea = \relative c {
-  f1\sustainOn |
+  f1 |
   es |
   f |
   < es bes'> |
 }
 
-lowerStaff= \transpose f, ${pitch} \relative c, {
+lowerStaff= \transpose f, \voicetrainerKey \relative c, {
   \global
   \clef bass
   % Held the door for me
@@ -849,7 +850,7 @@ myChords= \chordmode {
       \new DrumStaff {
         \drummode {
           \global
-          \repeat unfold 61 {
+          \repeat unfold 117 {
             hiwoodblock4 lowoodblock wbl wbl
           }
         }

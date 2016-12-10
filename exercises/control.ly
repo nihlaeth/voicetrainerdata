@@ -5,6 +5,11 @@
 \header {
 }
 
+voicetrainerTempo = 140
+voicetrainerKey = c
+voicetrainerKeyNoOctave = c
+voicetrainerSound = "Mi"
+
 % sheetonly start
 global= {
   \time 4/4
@@ -12,7 +17,7 @@ global= {
 
 exercise = {
   \override NoteHead #'color = #color-notehead
-  \transpose c ${pitch} \relative c' {
+  \transpose c \voicetrainerKey \relative c' {
     \key c \major
     < c e g >2\sustainOn
     \repeat unfold 2 {
@@ -28,12 +33,12 @@ exercise = {
 \book {
   \score {
     <<
-      \new ChordNames { \chordmode { ${pitch_noheight} }}
+      \new ChordNames { \chordmode { \voicetrainerKeyNoOctave }}
       \new Staff = "voice" <<
         \global
         \exercise
         \addlyrics {
-          \skip 1 ${sound} ${sound} ${sound}
+          \skip 1 \voicetrainerSound \voicetrainerSound \voicetrainerSound
 
         }
       >>
@@ -67,11 +72,11 @@ exercise = {
 % sheetonly end
 % midionly start
 global= {
-  \tempo 4=${tempo} \time 4/4
+  \tempo 4=\voicetrainerTempo \time 4/4
 }
 
 exercise = {
-  \transpose c ${pitch} \relative c' {
+  \transpose c \voicetrainerKey \relative c' {
     \key c \major
     < c e g >2\sustainOn
     \repeat unfold 2 {

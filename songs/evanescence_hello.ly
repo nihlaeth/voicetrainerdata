@@ -2,21 +2,22 @@
 \include "color-pitch.ly"
 \include "predefined-guitar-fretboards.ly"
 \version "2.19.50"
-% voicetrainer: tempo = 72
 % voicetrainer: measures = 61
 % voicetrainer: pages = 5
-% ${pitch_noheight}
 \header {
   title = "Hello"
   composer = "Evanescence"
   arranger = "arranged by: Tamara van Haarlem"
 }
 
+voicetrainerTempo = 72
+voicetrainerKey = b,
+
 global= {
-  \tempo 4=${tempo} \time 4/4 \key b \minor
+  \tempo 4=\voicetrainerTempo \time 4/4 \key b \minor
 }
 
-voiceStaff= \transpose b, ${pitch} \relative c' {
+voiceStaff= \transpose b, \voicetrainerKey \relative c' {
   \override NoteHead #'color = #color-notehead
   \global
   \clef "treble"
@@ -83,7 +84,7 @@ voiceStaff= \transpose b, ${pitch} \relative c' {
 
 }
 
-cello= \transpose b, ${pitch} \relative c, {
+cello= \transpose b, \voicetrainerKey \relative c, {
   \global
   \clef bass
   R1*40 |
@@ -111,7 +112,7 @@ upperC= \relative c' {
   r8 fis,( cis'16 fis, a fis d'8 cis cis16 b a cis) |
 }
 
-upperStaff= \transpose b, ${pitch} \relative c' {
+upperStaff= \transpose b, \voicetrainerKey \relative c' {
   \global
   r16 fis,( d' fis, d'8 cis16 fis, cis'8 a a cis) |
   \upperA
@@ -191,7 +192,7 @@ upperStaff= \transpose b, ${pitch} \relative c' {
 }
 
 
-lowerStaff= \transpose b, ${pitch} \relative c {
+lowerStaff= \transpose b, \voicetrainerKey \relative c {
   \global
   \clef bass
   \repeat unfold 3 {
