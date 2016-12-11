@@ -190,11 +190,6 @@ voiceStaff= \transpose d \voicetrainerKey \relative c'' {
 
 }
 
-cello= \transpose d \voicetrainerKey \relative c, {
-  \global
-  \clef bass
-}
-
 upperStaff= \transpose d \voicetrainerKey \relative c' {
   \global
   r8 d4 a'4. g8 fis~ |
@@ -535,11 +530,6 @@ myChords= \chordmode {
           No more...
         }
       >>
-      \new Staff = "cello" <<
-        \set Staff.instrumentName = \markup { "ViolonCello" }
-        \set Staff.shortInstrumentName = \markup { "C." }
-        \cello
-      >>
       \new PianoStaff = "piano" <<
         \new Staff {
           \set Staff.midiInstrument = "acoustic grand"
@@ -578,14 +568,6 @@ myChords= \chordmode {
         \voiceStaff
       >>
       % instrument end voice
-      % instrument start cello
-      \new Staff = "cello" <<
-        \set Staff.instrumentName = \markup { "ViolonCello" }
-        \set Staff.shortInstrumentName = \markup { "C." }
-        \set Staff.midiInstrument = "cello"
-        \cello
-      >>
-      % instrument end cello
       % instrument start piano
       \new PianoStaff = "piano" <<
         \new Staff {
