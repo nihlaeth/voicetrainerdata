@@ -20,24 +20,24 @@ global= {
 voiceStaff= \transpose d \voicetrainerKey \relative c' {
   \override NoteHead #'color = #color-notehead
   \global
-  %1 Think of me, think of me fondly, when we've said good-
+  \barNumberCheck #1
   r1 |
   r |
   fis8^"contained"\mp g fis2. |
   e8 e e a4. e4 |
   d4. d8 d4 d'^"open vocal" |
-  %6 bye. remember me once in a while please promise me you'll try
+  \barNumberCheck #6
   a2. r8 g8 |
   fis g fis2. |
   e8 e e a4. e4 |
   d4. d8 d4 d' |
   a2. r4 |
-  %11 when you find that once again you long to take your heart back and be free
+  \barNumberCheck #11
   fis8 g fis4. g8 fis g |
   fis g fis4. ais8 cis e |
   e4^"silent H"^"upper lip over teeth" d b fis |
   e2
-  %14 if you ever find a moment, spare a thought for me
+  \barNumberCheck #14
   d4 e |
   fis8 g fis2 b4 |
   a2 fis |
@@ -46,16 +46,16 @@ voiceStaff= \transpose d \voicetrainerKey \relative c' {
   \time 4/4
   d1 \bar "||"
   \transpose es f \relative c' {
-    %19
+    \barNumberCheck #19
     \key es \major
     \repeat unfold 7 r1 |
-    %26 we never said our love was ever green or as unchanging as the sea
+    \barNumberCheck #26
     r2.. as'8 |
     g as g4. as8 g as |
     g as g4. b8 d f |
     f4 es c g |
     f2
-    %30 but if you can still remember, stop and think of me
+    \barNumberCheck #30
     es4 f |
     g8 as g2 c4 |
     bes2 g |
@@ -63,7 +63,7 @@ voiceStaff= \transpose d \voicetrainerKey \relative c' {
     f4. g as d, |
     \time 4/4
     es1 \bar "||"
-    %35 think of all the things we've shared and seen, don't think about
+    \barNumberCheck #35
     % the things which might have been
     es2 es' |
     d4 d c bes |
@@ -73,7 +73,7 @@ voiceStaff= \transpose d \voicetrainerKey \relative c' {
     bes2 g |
     f-"poco rit." c |
     d r \bar "||"
-    %43
+    \barNumberCheck #43
     g8 as g2. |
     f8 f f bes4. f4 |
     es4. es8 es4 es'4 |
@@ -90,12 +90,12 @@ voiceStaff= \transpose d \voicetrainerKey \relative c' {
     bes2 g |
     f g |
     as d \bar "||"
-    %59
+    \barNumberCheck #59
     es1 |
     \repeat unfold 15 r1 |
   }
   \key es \major
-  %75
+  \barNumberCheck #75
   g8 as g4. as8 g as |
   g as g4. b8 d f |
   f4 es c g |
@@ -104,7 +104,7 @@ voiceStaff= \transpose d \voicetrainerKey \relative c' {
   bes2 g |
   f g |
   as r4.
-  %82
+  \barNumberCheck #82
   f16( g |
   as8 f c' as g'4) r8 as,16( bes |
   c8 as es' c f4) r16 (g,16 as bes |
@@ -133,18 +133,18 @@ fthemed = \relative c'' {
 
 fluteOne = \relative c'' {
   \global
-  %1
+  \barNumberCheck #1
   \repeat unfold 2 { r8\mp a fis' d a' d, fis a, | }
   \fthemea
   \fthemeb
   \fthemec
   \fthemeb
-  %7
+  \barNumberCheck #7
   \fthemea
   \fthemeb
   \fthemed
   \fthemeb
-  %11
+  \barNumberCheck #11
   r8 d fis b d2 |
   r8 ais, cis e ais2 |
   r8 fis, b d fis2 |
@@ -155,17 +155,17 @@ fluteOne = \relative c'' {
   b8 g e a fis cis fis d b cis4. |
   \time 4/4
   a1\< |
-  %19
+  \barNumberCheck #19
   \key f \major
   r4 a\f c f |
   e4. e8 g4 e |
   d'8 bes d bes d bes f'4 |
   c8 g c g c g c g |
-  %23
+  \barNumberCheck #23
   f4. c8 f c f c |
   e4. c8 e c e c |
   d'8( bes d bes d bes f'4) |
-  %26
+  \barNumberCheck #26
   g,2( e) |
   a( f4 d |
   e2 a |
@@ -177,7 +177,7 @@ fluteOne = \relative c'' {
   bes4.( c d~ d8 c bes |
   \time 4/4
   a4 bes8\< c es2) \bar "||"
-  %35
+  \barNumberCheck #35
   r8\mp d,( f bes d4 bes) |
   r8 e,( g c e4 c) |
   r8 es,( g bes es4 bes |
@@ -186,7 +186,7 @@ fluteOne = \relative c'' {
   a\mf |
   bes-"poco rit."\> |
   c |
-  %43
+  \barNumberCheck #43
   a'8-"a tempo"\p( bes a2. |
   g1 |
   f |
@@ -203,35 +203,35 @@ fluteOne = \relative c'' {
   c1 |
   bes2\mp( c |
   d e\<) \bar "||"
-  %59
+  \barNumberCheck #59
   a8\f( bes a2.) |
 }
 
 fluteTwo = \relative c'' {
   \global
-  %1
+  \barNumberCheck #1
   d1\mp | d | d | d | d |
-  %6
+  \barNumberCheck #6
   d | d | d | d | d |
-  %11
+  \barNumberCheck #11
   b | b | b | e, | a |
-  %16
+  \barNumberCheck #16
   b |
   \time 12/8
   e4. fis g a, |
   \time 4/4
   fis1\< |
-  %19
+  \barNumberCheck #19
   \key f \major
   r2 c'8\f( f, c' f,) |
   r2 c'8( g c g) |
   r2 d'8( f, d' f,) |
   r8 g( c g') c g g c, |
-  %23
+  \barNumberCheck #23
   r4 c f c |
   e2 e8( f g4) |
   r2 d8( f, d' f,) |
-  %26
+  \barNumberCheck #26
   r4. c'8\>( g'4 c,) |
   f2\mp( d4 a |
   cis1 |
@@ -243,7 +243,7 @@ fluteTwo = \relative c'' {
   d,4.( e f e |
   \time 4/4
   f4 ) r\< g ( a ) \bar "||"
-  %35
+  \barNumberCheck #35
   f1\mp |
   g |
   g |
@@ -252,7 +252,7 @@ fluteTwo = \relative c'' {
   e\mf f) |
   d1-"poco rit."\> |
   g |
-  %43
+  \barNumberCheck #43
   f'1-"a tempo"\p ( |
   c |
   bes |
@@ -269,13 +269,13 @@ fluteTwo = \relative c'' {
   a1 |
   g2\mp( a |
   g bes\<) \bar "||"
-  %59
+  \barNumberCheck #59
   f2~\f f8 f'4( c8) |
 }
 
 soloViolin = \relative c' {
   \global
-  % 1
+  \barNumberCheck #1
   r1 |
   r |
   \repeat unfold 2 {
@@ -287,22 +287,22 @@ soloViolin = \relative c' {
   { a2.) r8 g | }
   { a2.) r4 | }
   }
-  %11
+  \barNumberCheck #11
   fis8 g fis4. g8 fis g |
   fis g fis4. ais8 cis e |
   e4 d b fis |
   e2 d4 e |
   fis8 g fis2 b4 |
-  %16
+  \barNumberCheck #16
   a2 fis |
   \time 12/8
   e4. fis g cis, |
   \time 4/4
   d1 |
-  %19
+  \barNumberCheck #19
   \key f \major
   \repeat unfold 7 r1 |
-  %26
+  \barNumberCheck #26
   r2.. bes'8 |
   a bes a4. bes8 a bes |
   a bes a4. cis8 e g |
@@ -314,7 +314,7 @@ soloViolin = \relative c' {
   g4. a bes e, |
   \time 4/4
   f1 \bar "||"
-  %35
+  \barNumberCheck #35
   f2 f' |
   e4 e d c |
   es2 bes |
@@ -323,7 +323,7 @@ soloViolin = \relative c' {
   c2\f a |
   g-"poco rit."\> d |
   e r \bar "||"
-  %43
+  \barNumberCheck #43
   a8-"a tempo"\mf bes a2. |
   g8 g g c4. g4 |
   f4. f8 f4 f' |
@@ -340,19 +340,19 @@ soloViolin = \relative c' {
   c2 a |
   g\< a |
   bes e \bar "||"
-  %59
+  \barNumberCheck #59
   f1\fff |
 }
 
 violinOne = \relative c'' {
   \global
   \repeat unfold 16 r1 |
-  %17
+  \barNumberCheck #17
   \time 12/8
   g4.\mp( a) b( a) |
   \time 4/4
   a\< e8( fis a d e) |
-  %19
+  \barNumberCheck #19
   \key f \major
   \repeat unfold 2 {
     a\f( bes) a2. |
@@ -363,7 +363,7 @@ violinOne = \relative c'' {
     { c'1 | }
     { c4. g8\> c( g) c,( bes) | }
   }
-  %27
+  \barNumberCheck #27
   a8(\mp f a f) a( f a f) |
   a( g a g) a( cis,\< e g) |
   g4(\mf f\> d2) |
@@ -373,14 +373,14 @@ violinOne = \relative c'' {
   \time 12/8
   g( e g) e( c e) f( d f) e4. |
   f4\<( g8 a) bes4( c\mf) \bar "||"
-  %35
+  \barNumberCheck #35
   d2 f |
   e g |
   g es |
   bes1\> |
   r1\mp | r1 | r1-"poco rit." |
   r4\mp\> c,:32 g':32 c:32 |
-  %43
+  \barNumberCheck #43
   r8-"a tempo"\p c:16 a':16 f:16 c':16 f,:16 a:16 c,:16 |
   r8 c:16 g':16 e:16 c':16 e,:16 g:16 c,:16 |
   r f,:16 d':16 bes:16 f':16 bes,:16 d:16 f:16 |
@@ -397,19 +397,19 @@ violinOne = \relative c'' {
   a f8( g a g f e) |
   d e d g a c,\< e a |
   bes d, f bes g8( g4.) \bar "||"
-  %59
+  \barNumberCheck #59
   f'8:16\ff c:16 c:16 f:16 f:16 c:16 c:16 f:16 |
 }
 
 violinTwo = \relative c' {
   \global
   \repeat unfold 16 r1 |
-  %17
+  \barNumberCheck #17
   \time 12/8
   e4.\mp( fis) g( e) |
   \time 4/4
   fis4.\< e8( fis a d e) |
-  %19
+  \barNumberCheck #19
   \key f \major
   \repeat unfold 2 {
     a,8\f( bes) a2. |
@@ -420,7 +420,7 @@ violinTwo = \relative c' {
     { c1 |}
     { c4.\> g8 e( c) g4 |}
   }
-  %27
+  \barNumberCheck #27
   f'8\mp( d f d) f( d f d) |
   cis e cis e cis a cis e |
   a,2 c |
@@ -431,14 +431,14 @@ violinTwo = \relative c' {
   bes,( g bes) c( a c) d( bes d) d( c bes) |
   \time 4/4
   c2\< g'4( a\mf) \bar "||"
-  %35
+  \barNumberCheck #35
   bes2 d |
   c e |
   es bes |
   g1\> |
   r1\mp | r1 | r1-"poco rit." |
   r4\mp\> c,4:32 g':32 c:32 |
-  %43
+  \barNumberCheck #43
   c,1:32-"a tempo"\p |
   c:32 |
   d:32 |
@@ -455,7 +455,7 @@ violinTwo = \relative c' {
   f4 d8( e f e d c) |
   bes bes d g a c,\< e a |
   bes d, f bes e,8( e4.) \bar "||"
-  %59
+  \barNumberCheck #59
   < f a>2:32\ff < f a>:32 |
 }
 
@@ -463,12 +463,12 @@ viola = \relative c' {
   \global
   \clef alto
   \repeat unfold 16 r1 |
-  %17
+  \barNumberCheck #17
   \time 12/8
   a4.\mp( b) d( cis) |
   \time 4/4
   d\< e8( fis a d e) |
-  %19
+  \barNumberCheck #19
   \key f \major
   \repeat unfold 2 {
     a,\f( bes) a2. |
@@ -479,7 +479,7 @@ viola = \relative c' {
     { c1 |}
     { c4. c8\> g( e) e4 | }
   }
-  %27
+  \barNumberCheck #27
   a2.\mp a4 |
   a2. r4 |
   d,,8( a' c e) f( g a c) |
@@ -490,7 +490,7 @@ viola = \relative c' {
   bes( g bes) c( a c) d( bes d) bes( a g) |
   \time 4/4
   a4\<( bes8 c) es2\mf \bar "||"
-  %35
+  \barNumberCheck #35
   f2 bes |
   g c |
   bes g |
@@ -499,7 +499,7 @@ viola = \relative c' {
   r4 f,8( a) d4( a) |
   r4-"poco rit." d, bes'( a8 bes) |
   g2\>( c,) \bar "||"
-  %43
+  \barNumberCheck #43
   f1:32-"a tempo"\p |
   f:32 |
   f:32 |
@@ -516,7 +516,7 @@ viola = \relative c' {
   c4 f8( g a g f e) |
   d d, g bes c e,\< a c |
   d f, bes d bes bes4. \bar "||"
-  %59
+  \barNumberCheck #59
   c'2:32\ff c:32 |
 }
 
@@ -524,12 +524,12 @@ cello= \transpose d \voicetrainerKey \relative c, {
   \global
   \clef bass
   \repeat unfold 16 r1 |
-  %17
+  \barNumberCheck #17
   \time 12/8
   e4.\mp fis g a |
   \time 4/4
   d4. a8\<( d e fis a) |
-  %19
+  \barNumberCheck #19
   \key f \major
   \repeat unfold 2 {
     a\f( bes) a2. |
@@ -540,7 +540,7 @@ cello= \transpose d \voicetrainerKey \relative c, {
     { c1 | }
     { c2.\> c,4 | }
   }
-  %27
+  \barNumberCheck #27
   d2.\mp d4 |
   d2. r4 |
   d,8( a' c e) f( g a c) |
@@ -551,7 +551,7 @@ cello= \transpose d \voicetrainerKey \relative c, {
   g,4. a bes c |
   \time 4/4
   f,\< f f4 \bar "||"
-  %35
+  \barNumberCheck #35
   r8\mf d' (f bes) d4( bes) |
   r8 e,( g c) e4( c) |
   r8 es,( g bes) es4( bes) |
@@ -560,7 +560,7 @@ cello= \transpose d \voicetrainerKey \relative c, {
   r4 f,8( a) d4( a) |
   r4-"poco rit." d, bes'( a8 bes) |
   g2\>( c,) \bar "||"
-  %43
+  \barNumberCheck #43
   r1-"a tempo"\p |
   r |
   r |
@@ -577,7 +577,7 @@ cello= \transpose d \voicetrainerKey \relative c, {
   d4 d8( e f e d c) |
   d2 e\< |
   f c8 c4. \bar "||"
-  %59
+  \barNumberCheck #59
   f,2~\ff f8 f4( c8) |
 }
 
@@ -585,12 +585,12 @@ contrabass = \relative c, {
   \global
   \clef "bass_8"
   \repeat unfold 16 r1 |
-  %17
+  \barNumberCheck #17
   \time 12/8
   r1. |
   \time 4/4
   d1\p\< |
-  %19
+  \barNumberCheck #19
   \key f \major
   f,2.\f f4 |
   f4. f8~ f2 |
@@ -599,7 +599,7 @@ contrabass = \relative c, {
   f2. f4 |
   f4. f8~ f2 |
   bes2. bes4 |
-  %26
+  \barNumberCheck #26
   c1\> |
   r\mp |
   r |
@@ -611,7 +611,7 @@ contrabass = \relative c, {
   r1. |
   \time 4/4
   r1 \bar "||"
-  %35
+  \barNumberCheck #35
   bes2.\mf bes'4 |
   bes2. bes,4 |
   bes2. bes'4 |
@@ -620,7 +620,7 @@ contrabass = \relative c, {
   d r |
   r1-"poco rit." |
   c-"arco" \bar "||"
-  %43
+  \barNumberCheck #43
   r1-"a tempo" |
   r |
   r |
@@ -637,13 +637,13 @@ contrabass = \relative c, {
   d1 |
   g2-"arco" a\< |
   bes c8 c4. \bar "||"
-  %59
+  \barNumberCheck #59
   f,,2~\ff f8 f'4( c8) |
 }
 
 upperStaff= \transpose d \voicetrainerKey \relative c' {
   \global
-  %1
+  \barNumberCheck #1
   \repeat unfold 2 { r8\mp a\sustainOn fis' d a' d, fis a, | }
   \repeat unfold 2 {
     <<
@@ -661,21 +661,21 @@ upperStaff= \transpose d \voicetrainerKey \relative c' {
   }
   \alternative {
     {
-      %6
+      \barNumberCheck #6
       <<
         { \voiceOne a2 r4. g8 }
         \new Voice { \voiceTwo < cis, e>4 e8 cis a' a, < cis e>4 }
       >> \oneVoice |
     }
     {
-      %10
+      \barNumberCheck #10
       <<
         { \voiceOne a'2 r2 }
         \new Voice { \voiceTwo < cis, e>4 cis8 e a e cis a }
       >> \oneVoice |
     }
   }
-  %11
+  \barNumberCheck #11
   <<
     { \voiceTwo < b d>2 < b d> }
     \new Voice { \voiceOne fis'8 g fis4. g8 fis g }
@@ -707,7 +707,7 @@ upperStaff= \transpose d \voicetrainerKey \relative c' {
   >> \oneVoice |
   \time 4/4
   < fis a d>4. e'8 fis a d fis |
-  %19
+  \barNumberCheck #19
   \key f \major
   \transpose es f \relative c''' {
     \repeat unfold 2 {
@@ -729,14 +729,14 @@ upperStaff= \transpose d \voicetrainerKey \relative c' {
         >> \oneVoice |
       }
       {
-        %26
+        \barNumberCheck #26
         <<
           { \voiceOne bes''2 }
           \new Voice { \voiceTwo < d, f>4. f8 }
         >> \oneVoice bes\> f bes, as |
       }
     }
-    %27
+    \barNumberCheck #27
     <<
       { \voiceTwo< c, es>2\mf < c es> }
       \new Voice { \voiceOne g'8 as g4. as8 g as }
@@ -765,7 +765,7 @@ upperStaff= \transpose d \voicetrainerKey \relative c' {
       { \voiceTwo < g bes>2 des' }
       \new Voice { \voiceOne es4 f8\< g < f as>4 < g bes>\! }
     >> \oneVoice \bar "||"
-    %35
+    \barNumberCheck #35
     < c, es>2\ff < as' c es> |
     < f bes d>4 < f bes d> < f c'> < d f bes> |
     < f as des>2 < f as> |
@@ -780,7 +780,7 @@ upperStaff= \transpose d \voicetrainerKey \relative c' {
       { \voiceTwo < as d>1 }
       \new Voice { \voiceOne r4 bes f' bes }
     >> \oneVoice \bar "||"
-    %43
+    \barNumberCheck #43
     g'8\mp( as g2.) |
     f8 f f bes4. f4 |
     es4. es8 es4 es' |
@@ -814,7 +814,7 @@ upperStaff= \transpose d \voicetrainerKey \relative c' {
         as, c es as d, f as bes)
       }
     >> \oneVoice \bar "||"
-    %59
+    \barNumberCheck #59
     <<
       { \voiceTwo < bes es>4\f < bes es>2. }
       \new Voice { \voiceOne g'8 as g2. }
@@ -825,19 +825,19 @@ upperStaff= \transpose d \voicetrainerKey \relative c' {
 lowerStaff= \transpose d \voicetrainerKey \relative c, {
   \global
   \clef bass
-  %1
+  \barNumberCheck #1
   d1\mp\sustainOn |
   d |
   d2 d |
   d1 |
   d |
-  %6
+  \barNumberCheck #6
   d |
   d2 d |
   d1 |
   d |
   d |
-  %11
+  \barNumberCheck #11
   b | b | b |
   e2. e4 |
   a1 |
@@ -846,7 +846,7 @@ lowerStaff= \transpose d \voicetrainerKey \relative c, {
   e,4. fis g a |
   \time 4/4
   d,1 |
-  %19
+  \barNumberCheck #19
   \key f \major
   <<
     { \voiceTwo < f\f f'>1 }
@@ -874,7 +874,7 @@ lowerStaff= \transpose d \voicetrainerKey \relative c, {
       { \voiceTwo < as, as'>1 }
       \new Voice { \voiceOne r4 < es' as c>4 < as c es> < es as c> }
     >> \oneVoice |
-    %26
+    \barNumberCheck #26
     < bes bes'>1 |
     c |
     c |
@@ -889,7 +889,7 @@ lowerStaff= \transpose d \voicetrainerKey \relative c, {
     f4. g as bes |
     \time 4/4
     es,2.\< es4\! \bar "||"
-    %35
+    \barNumberCheck #35
     <<
       { \voiceTwo as2.\ff as4 }
       \new Voice { \voiceOne r8 c es as c4 r }
@@ -919,7 +919,7 @@ lowerStaff= \transpose d \voicetrainerKey \relative c, {
       \new Voice { \voiceOne r4 c' as' g8 as }
     >> \oneVoice |
     < bes, f'>1 \bar "||"
-    %43
+    \barNumberCheck #43
     \clef treble
     r8\mp bes'( g' es bes' es, g bes,) |
     r bes( f' d bes' d, f bes,) |
@@ -938,7 +938,7 @@ lowerStaff= \transpose d \voicetrainerKey \relative c, {
     c |
     f,2 g |
     as bes\< \bar "||"
-    %59
+    \barNumberCheck #59
     <<
       { \voiceTwo < es, es'>1\f }
       \new Voice { \voiceOne r4 < es' g bes> < g bes es> < es g bes> }

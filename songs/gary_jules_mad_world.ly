@@ -22,14 +22,14 @@ global= {
 
 mainOne= \relative c' {
   r4 f8 f as as f f |
-  c' c4 c as4. |
+  c'^"control"  c4 c as4. |
   bes8 bes4 bes g4. |
   bes8 bes4 bes8~ bes as( g f) |
 }
 
 mainTwo= \relative c' {
   r4. f8 as as f f |
-  c' c4 c as4. |
+  c'^"control"  c4 c as4. |
   bes8 bes4 bes g4. |
   bes8 bes4 bes8~ bes as( g f) |
 }
