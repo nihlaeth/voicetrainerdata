@@ -75,7 +75,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   c des c2) r4 |
 
   % Take my hand just be careful with it
-  as'1 |
+  as'1^"control" |
   g2. r4 |
   es2 r8 es8 c es~ |
   es c4 bes as4. |
@@ -133,7 +133,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   c8( des c2) r4 |
 
   % take my hand, just be careful with it
-  as'1 |
+  as'1^"control" |
   g2. r4 |
   es2  r8 es c es~ |
   es c4 bes as4. |
@@ -205,7 +205,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
   r1 |
 
   % take my hand, just be careful with it
-  as'1 |
+  as'1^"control" |
   g2. r4 |
   es2 r8 es8 c es~|
   es c4 bes as4. |
@@ -218,7 +218,7 @@ voiceStaff= \transpose f, \voicetrainerKey \relative c' {
 
   \barNumberCheck #107
   % take my hand, 'cause I trust you with it
-  as'1 |
+  as'1^"control" |
   g2. r4 |
   es2 r8 es c es~ |
   es c4 bes as4. |
