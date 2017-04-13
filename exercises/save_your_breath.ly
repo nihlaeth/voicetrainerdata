@@ -34,6 +34,7 @@ exercise = {
   }
 }
 
+% sheetonly start
 \book {
   \score {
     <<
