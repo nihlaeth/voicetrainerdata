@@ -964,6 +964,7 @@ myChords= \chordmode {
     <<
       \new ChordNames { \myChords }
       \new FretBoards { \myChords }
+      % instrument start voice
       \new Staff = "voice" <<
         \set Staff.instrumentName = \markup { "Voice" }
         \set Staff.shortInstrumentName = \markup { "V." }
@@ -1001,46 +1002,64 @@ myChords= \chordmode {
           Can it be Chris -- tine?
         }
       >>
+      % instrument end voice
+      % instrument start fluteOne
       \new Staff = "fluteOne" <<
         \set Staff.instrumentName = \markup { "Flute I" }
         \set Staff.shortInstrumentName = \markup { "FI" }
         \fluteOne
       >>
+      % instrument end fluteOne
+      % instrument start fluteTwo
       \new Staff = "fluteTwo" <<
         \set Staff.instrumentName = \markup { "Flute II" }
         \set Staff.shortInstrumentName = \markup { "FII" }
         \fluteTwo
       >>
+      % instrument end fluteTwo
+      % instrument start soloViolin
       \new Staff = "soloViolin" <<
         \set Staff.instrumentName = \markup { "SoloViolin" }
         \set Staff.shortInstrumentName = \markup { "S.V." }
         \soloViolin
       >>
+      % instrument end soloViolin
+      % instrument start violinOne
       \new Staff = "violinOne" <<
         \set Staff.instrumentName = \markup { "Violin I" }
         \set Staff.shortInstrumentName = \markup { "VI" }
         \violinOne
       >>
+      % instrument end violinOne
+      % instrument start violinTwo
       \new Staff = "violinTwo" <<
         \set Staff.instrumentName = \markup { "Violin II" }
         \set Staff.shortInstrumentName = \markup { "VII" }
         \violinTwo
       >>
+      % instrument end violinTwo
+      % instrument start viola
       \new Staff = "viola" <<
         \set Staff.instrumentName = \markup { "Viola" }
         \set Staff.shortInstrumentName = \markup { "Vla." }
         \viola
       >>
+      % instrument end viola
+      % instrument start cello
       \new Staff = "cello" <<
         \set Staff.instrumentName = \markup { "ViolonCello" }
         \set Staff.shortInstrumentName = \markup { "C." }
         \cello
       >>
+      % instrument end cello
+      % instrument start contrabass
       \new Staff = "contrabass" <<
         \set Staff.instrumentName = \markup { "Contrabass" }
         \set Staff.shortInstrumentName = \markup { "Cb." }
         \contrabass
       >>
+      % instrument end contrabass
+      % instrument start piano
       \new PianoStaff = "piano" <<
         \new Staff {
           \removeWithTag midi \upperStaff
@@ -1051,6 +1070,7 @@ myChords= \chordmode {
         }
         \new Dynamics \pianoPedal
       >>
+      % instrument end piano
     >>
     \layout {
       \context {
@@ -1125,7 +1145,7 @@ myChords= \chordmode {
       % instrument end contrabass
       % instrument start piano
       \new PianoStaff = "piano" <<
-        \new Staff {
+        \new Staff = "piano:1" {
           \set Staff.midiInstrument = "acoustic grand"
           \new Voice <<
             \new Dynamics \pianoDynamics
@@ -1133,7 +1153,7 @@ myChords= \chordmode {
             \new Dynamics \pianoPedal
           >>
         }
-        \new Staff {
+        \new Staff = "piano:2" {
           \set Staff.midiInstrument = "acoustic grand"
           \new Voice <<
             \new Dynamics \pianoDynamics
@@ -1144,7 +1164,7 @@ myChords= \chordmode {
       >>
       % instrument end piano
       % instrument start metronome
-      \new DrumStaff {
+      \new DrumStaff = "metronome" {
         \drummode {
           \global
           \repeat unfold 61 {
