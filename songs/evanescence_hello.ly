@@ -386,6 +386,7 @@ myChords= \chordmode {
     <<
       \new ChordNames { \myChords }
       \new FretBoards { \myChords }
+      % instrument start voice
       \new Staff = "voice" <<
         \set Staff.instrumentName = \markup { "Voice" }
         \set Staff.shortInstrumentName = \markup { "V." }
@@ -411,12 +412,16 @@ myChords= \chordmode {
 
         }
       >>
+      % instrument end voice
+      % instrument start cello
       \new Staff = "cello" <<
         \set Staff.instrumentName = \markup { "ViolonCello" }
         \set Staff.shortInstrumentName = \markup { "C." }
         \set Staff.midiInstrument = "cello"
         \cello
       >>
+      % instrument end cello
+      % instrument start piano
       \new PianoStaff = "piano" <<
         \new Staff {
           \set Staff.midiInstrument = "acoustic grand"
@@ -429,6 +434,7 @@ myChords= \chordmode {
         }
         \new Dynamics \pianoPedal
       >>
+      % instrument end piano
     >>
     \layout {
       \context {
@@ -466,7 +472,7 @@ myChords= \chordmode {
       % instrument end cello
       % instrument start piano
       \new PianoStaff = "piano" <<
-        \new Staff {
+        \new Staff = "piano:1" {
           \set Staff.midiInstrument = "acoustic grand"
           \new Voice <<
             \new Dynamics \pianoDynamics
@@ -474,7 +480,7 @@ myChords= \chordmode {
             \new Dynamics \pianoPedal
           >>
         }
-        \new Staff {
+        \new Staff = "piano:2" {
           \set Staff.midiInstrument = "acoustic grand"
           \new Voice <<
             \new Dynamics \pianoDynamics
@@ -485,7 +491,7 @@ myChords= \chordmode {
       >>
       % instrument end piano
       % instrument start metronome
-      \new DrumStaff {
+      \new DrumStaff = "metronome" {
         \drummode {
           \global
           \repeat unfold 61 {
