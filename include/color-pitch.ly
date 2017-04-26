@@ -1,4 +1,4 @@
-\version "2.19.50"
+\version "2.19.49"
 %Association list of pitches to colors.
 #(define color-mapping
   (list
