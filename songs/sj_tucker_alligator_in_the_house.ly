@@ -119,6 +119,61 @@ myChords= \chordmode {
           rep -- ti -- lian tracks lead un -- der -- neath the bed
           and all the cats are tas -- ty, fat and scared
           though I doubt we've lost a -- ny yet
+
+          so what's the big deal? does -- n't e -- very -- one
+          have an al -- li -- ga -- tor some -- where, some -- how?
+          and may -- be this one has al -- ways been here
+          but I ne -- ver no -- ticed it till now
+
+          there's an al -- li -- ga -- tor in the house
+          just caught her nap -- ping in the li -- ving room
+          she was do -- zing on the vel -- vet couch
+          and the cats were slee -- ping there too
+          there's an al -- li -- ga -- tor in the house
+          no one seems to mind ex -- cept for me
+          well, at least she does -- n't eat the cats
+          I sus -- pect she'd ra -- ther eat me
+
+          there's an al -- li -- ga -- tor in the pit
+          she is dan -- cing wil -- dly with the snakes
+          to \skip 8  win them o -- ver to her cause
+          she will do what -- ever it takes
+          they think I don't see their lit -- tle smiles
+          as they plan rep -- ti -- lian over -- throw
+          but I hear them tal -- king in my dreams
+          they will not be sad to see me go!
+
+          I've be -- gun to wor -- ry 'bout my toes
+          the al -- li -- ga -- tor seems to think they're nice
+          I've coun -- ted all of them a hun -- dred times
+          but I ne -- ver got the same an -- swer twice
+
+          there's an al -- li -- ga -- tor in my bed
+          she is not a ma -- ster of dis -- guise
+          just a pil -- low wai -- ting for my head
+          soft and sweet and hun -- gri -- ly she lies
+
+          there's an al -- li -- ga -- tor in the house
+          to -- day she joined me for a spot of tea
+          she helped her -- self to rasp -- ber -- ries and cream
+          and she di -- dn't leave a -- ny for me
+
+          well I thought that I had seen it all
+          but this al -- li -- ga -- tor proved me wrong
+          like a la -- dy as she drank tea
+          she sang to me this lit -- tle song
+
+          so what's the big deal? Does -- n't every -- one
+          have an al -- li -- ga -- tor some -- where, some -- how?
+          I know that you'd miss me if I were gone
+          though you ne -- ver no -- ticed un -- til now
+
+          so what's the big deal? does -- n't every -- one
+          have an al -- li -- ga -- tor some -- where, some -- how?
+          and may -- be this one has al -- ways been here
+          but I ne -- ver no -- ticed it till now
+
+          there's an al -- li -- ga -- tor in my head
         }
       >>
       % instrument end voice
