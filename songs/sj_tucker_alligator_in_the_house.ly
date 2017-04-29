@@ -17,13 +17,9 @@ global= {
   \tempo 4=\voicetrainerTempo \time 4/4 \key a \minor
 }
 
-voiceStaff= \transpose a \voicetrainerKey \relative c'' {
-  \override NoteHead #'color = #color-notehead
-  \global
-  \repeat unfold 3 r1 |
-  r2. a8 b |
+voiceVerse= \relative c'' {
+  a8 b |
   c4. a8 c8. \tuplet 6/5 { d8 c b } |
-  \barNumberCheck #6
   g4 r4. g8 g a |
   b4. d,8 d'8. \tuplet 6/5 { c8 b c } |
   a4 r4. a8 a b |
@@ -33,15 +29,30 @@ voiceStaff= \transpose a \voicetrainerKey \relative c'' {
   e4 r2 a,8 b |
   c4. a8 c8. \tuplet 6/5 { d8 c b } |
   g4 r4. g8 g a |
-  \barNumberCheck #15
   b4. d,8 d'8. \tuplet 6/5 { c8 b c } |
   a4 r4. a8 a b |
   c4. a8 c8. \tuplet 6/5 { d8 c b } |
-  g4 r4. g8 g a |
+  g4 r2 g8 a |
   b4. d,8 d'8. \tuplet 6/5 { e4 f8 } |
-  e4 r2
-  % end of first verse
+  e4
+}
 
+voiceChorus= \relative c'' {
+  e4 |
+  \tuplet 3/2 { a a a } g e8 e |
+  f4 g e r |
+  d8 e \tuplet 4/3 { g4 g g g } |
+  g8 g4. a8 e,4. |
+}
+
+voiceStaff= \transpose a \voicetrainerKey \relative c'' {
+  \override NoteHead #'color = #color-notehead
+  \global
+  \repeat unfold 3 r1 |
+  r2.
+  \voiceVerse
+  r2
+  \voiceChorus
 }
 
 celloAm= \relative c {
@@ -56,18 +67,27 @@ celloESeven= \relative c {
   e4. as8 d4 as |
 }
 
-
-cello= \transpose a \voicetrainerKey \relative c {
-  \global
-  \clef bass
-  \repeat unfold 4 \celloAm
+celloVerse= \relative c {
   \repeat unfold 4 {
     \celloAm
     \celloG
     \celloESeven
     \celloAm
   }
-  % end of first verse
+}
+
+celloChorus= \relative c {
+  a'4. g8~ g2 |
+  f4. e8~ e2 |
+}
+
+cello= \transpose a \voicetrainerKey \relative c {
+  \global
+  \clef bass
+  \repeat unfold 4 \celloAm
+  \celloVerse
+  \set Staff.midiInstrument = "cello"
+  \celloChorus
 }
 
 upperStaff= \transpose a \voicetrainerKey \relative c' {
@@ -90,7 +110,7 @@ myChords= \chordmode {
   \transpose a \voicetrainerKey {
     a1:m
     \repeat unfold 3 \skip 1
-    \repeat unfold 3 {
+    \repeat unfold 4 {
       \skip 1
       g
       e:7
