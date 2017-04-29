@@ -14,7 +14,7 @@ voicetrainerTempo = 80
 voicetrainerKey = g
 
 global= {
-  \tempo 4=\voicetrainerTempo \time 4/4 \key g \minor
+  \tempo 4=\voicetrainerTempo \time 6/4 \key g \minor
 }
 
 voiceStaff= \transpose g \voicetrainerKey \relative c' {
@@ -27,9 +27,34 @@ cello= \transpose g \voicetrainerKey \relative c, {
   \clef bass
 }
 
+bass= \transpose g \voicetrainerKey \relative c {
+  \global
+  \clef bass
+  g1.\pp\< |
+  f1 d4 f |
+  \time 4/4
+  g2. bes4 |
+  c d8 c bes4 a |
+  g2. d4 |
+  g a < d, a' >2~ |
+  < d a' >4 < es bes' > < es c' > < d bes' >8 < d a' > |
+  g1 |
+
+  \barNumberCheck #9
+  r2 d4\mp f |
+  g2 g4 < f a > |
+  < f a > < f a > < d a' > < g d' >4~ |
+  < g d' >2 d4 g |
+  a < d, d' >2. |
+  < d d' >4 < es f' > < es f' > < d c' > |
+  < g d' >1 |
+}
+
 upperStaff= \transpose g \voicetrainerKey \relative c' {
   \global
-  r2 d4 f |
+  r1. |
+  r1 d4 f |
+  \time 4/4
   < bes, d g >2. bes'4 |
   < f a c > d'8 c bes4 a |
   < bes, d g >2. d4 |
@@ -41,7 +66,7 @@ upperStaff= \transpose g \voicetrainerKey \relative c' {
   < es, a c >8 bes' a4 es < bes d g >4~ |
   < bes d g >2 d4 f |
 
-  \barNumberCheck #12
+  \barNumberCheck #13
 
   g < c, f a > < c f a >2 |
   bes'4 < es, g c >8 bes' a4 g |
@@ -56,14 +81,14 @@ upperStaff= \transpose g \voicetrainerKey \relative c' {
   < bes, d g >1 |
   r2 < d d' >4 < f f' > |
 
-  \barNumberCheck #24
+  \barNumberCheck #25
 
   < g g' >2. < bes bes' >4 |
   < c c' > < d d' >8 < c c' > < bes bes' >4 < a a' > |
   < g g' >1~ |
   < g g' >4 < d d' > < f f' > < g g' > |
 
-  \barNumberCheck #28
+  \barNumberCheck #29
 
   < a a' >2. < bes bes' >4 |
   < c c' > < bes bes' >8 < a a' > < g g' >2~ |
@@ -74,7 +99,7 @@ upperStaff= \transpose g \voicetrainerKey \relative c' {
   < g g' >2 < d d' >4 < f f' > |
   < g g' > < a a' > < a a' >2 |
 
-  \barNumberCheck #36
+  \barNumberCheck #37
 
   < bes bes' >4 < c c' >8 < bes bes' > < a a' >4 < g g' > |
   < a a' >1~ |
@@ -92,8 +117,10 @@ upperStaff= \transpose g \voicetrainerKey \relative c' {
 lowerStaff= \transpose g \voicetrainerKey \relative c {
   \global
   \clef bass
-  r1 |
-  < g g' > |
+  r1. |
+  r |
+  \time 4/4
+  < g g' >1 |
   < f f' > |
   < g g' > |
   r2 < f f' >~ |
@@ -104,7 +131,7 @@ lowerStaff= \transpose g \voicetrainerKey \relative c {
   < f f' >2. < g g' >4~ |
   < g g' >2 r |
 
-  \barNumberCheck #12
+  \barNumberCheck #13
 
   r4 < f f' > < f f' >2 |
   r4 < c c' >2. |
@@ -115,13 +142,13 @@ lowerStaff= \transpose g \voicetrainerKey \relative c {
   g d' g d |
   g,2 r |
 
-  \barNumberCheck #24
+  \barNumberCheck #25
 
   \repeat unfold 2 { g8 d' bes' d, } |
   \repeat unfold 2 { f, c' a' c, } |
   \repeat unfold 4 { g d' bes' d, } |
 
-  \barNumberCheck #28
+  \barNumberCheck #29
 
   \repeat unfold 2 { f, c' a' c, } |
   c, g' es' g,
@@ -131,7 +158,7 @@ lowerStaff= \transpose g \voicetrainerKey \relative c {
   \repeat unfold 3 { bes' d, g, d' } |
   bes' d, f, c' a' c, f, c' |
 
-  \barNumberCheck #36
+  \barNumberCheck #37
 
   a' c, c, g' es' g, c, g' |
   \repeat unfold 4 { f c' a' c, } |
@@ -178,6 +205,13 @@ myChords= \chordmode {
         \cello
       >>
       % instrument end cello
+      % instrument start bass
+      \new Staff = "bass" <<
+        \set Staff.instrumentName = \markup { "Bass" }
+        \set Staff.shortInstrumentName = \markup { "B." }
+        \bass
+      >>
+      % instrument end bass
       % instrument start piano
       \new PianoStaff = "piano" <<
         \new Staff {
@@ -226,6 +260,12 @@ myChords= \chordmode {
         \cello
       >>
       % instrument end cello
+      % instrument start bass
+      \new Staff = "bass" <<
+        \set Staff.midiInstrument = "contrabass"
+        \bass
+      >>
+      % instrument end bass
       % instrument start piano
       \new PianoStaff = "piano" <<
         \new Staff = "piano:1" {
