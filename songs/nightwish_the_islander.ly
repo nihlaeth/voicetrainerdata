@@ -2,19 +2,32 @@
 \include "color-pitch.ly"
 \include "predefined-guitar-fretboards.ly"
 \version "2.19.49"
-% voicetrainer: measures = 61
-% voicetrainer: pages = 2
+% voicetrainer: measures = 126
+% voicetrainer: pages = 5
 \header {
   title = "The islander"
   composer = "Nightwish"
   arranger = "arranged by: Tamara van Haarlem"
 }
 
-voicetrainerTempo = 100
+voicetrainerTempo = 90
 voicetrainerKey = d
 
 global= {
   \tempo 4=\voicetrainerTempo \time 6/8 \key d \major
+}
+
+voiceChorus= \relative c' {
+  d8 e fis |
+  g4. fis |
+  e d |
+  g8 g g fis e d |
+  b4. r4 d8 |
+  g4. fis |
+  e d4 d8 |
+  g8 g16 g8 g16 fis8 e d |
+  b4 r8 b cis cis~ |
+  cis b4
 }
 
 voiceStaff= \transpose d \voicetrainerKey \relative c'' {
@@ -52,16 +65,9 @@ voiceStaff= \transpose d \voicetrainerKey \relative c'' {
   \barNumberCheck #37
   \time 6/8
   b4 r2 |
-  r4. d8 e fis |
-  g4. fis |
-  e d |
-  g8 g g fis e d |
-  b4. r4 d8 |
-  g4. fis |
-  e d4 d8 |
-  g8 g16 g8 g16 fis8 e d |
-  b4 r8 b cis cis~ |
-  cis b4 r4. |
+  r4.
+  \voiceChorus
+  r4. |
   \barNumberCheck #48
   \repeat unfold 9 r2. |
   \barNumberCheck #57
@@ -96,10 +102,11 @@ voiceStaff= \transpose d \voicetrainerKey \relative c'' {
   \time 6/8
   b4 r2 |
   \barNumberCheck #77
-
-
-
-
+  r4. \voiceChorus r4. |
+  \repeat unfold 17 r2. |
+  \barNumberCheck #104
+  r4. \voiceChorus r4. |
+  \repeat unfold 12 r2. \bar "|."
 }
 
 cello= \transpose d \voicetrainerKey \relative c, {
@@ -209,8 +216,54 @@ upperStaff= \transpose d \voicetrainerKey \relative c''' {
   < fis fis' >4. r |
   r2. |
   \barNumberCheck #78
-
-
+  \repeat unfold 2 {
+    < d g >4. fis |
+    < a, e' > < b d > |
+  }
+  < d g > fis |
+  < a, e' > < b fis' > |
+  < d g > a' |
+  < fis b >2. |
+  r |
+  \barNumberCheck #87
+  \repeat unfold 2 {
+    b8 cis d cis b a |
+    b fis4~ fis d8 |
+    e d b d cis a |
+    g4. fis |
+  }
+  \repeat unfold 2 { b8 d fis b fis d | }
+  \repeat unfold 2 {
+    \repeat unfold 2 { b8 d fis b fis d | }
+    g fis e d cis b |
+  }
+  \barNumberCheck #103
+  < b b' >4. < cis cis' > |
+  < d d' > d8 e fis |
+  < d g >4. fis |
+  < a, e' > < b d > |
+  < d g >4. fis |
+  < a, e' >
+  <<
+    { \voiceOne  b4. }
+    \new Voice { \voiceTwo d8-\tag midi \sustainOn-\tag midi \p e fis }
+  >> \oneVoice |
+  < d g >4. fis |
+  < a, e' > < b fis' > |
+  < d g > a' |
+  < fis b >2. |
+  r |
+  \barNumberCheck #114
+  \repeat unfold 2 {
+    b8 cis d cis b a |
+    b fis4~ fis d8 |
+    e d b d cis a |
+    g4. fis |
+  }
+  < b b' >2.~ |
+  < b b' >~ |
+  < b b' >~ |
+  < b b' > \bar "|."
 }
 
 lowerStaff= \transpose d \voicetrainerKey \relative c' {
@@ -290,14 +343,41 @@ lowerStaff= \transpose d \voicetrainerKey \relative c' {
   \repeat unfold 4 { b, fis' b } |
   < g, g' >2. |
   \barNumberCheck #79
+  \repeat unfold 3 {
+    < a a' >4. < b b' > |
+    < g g' >2. |
+  }
+  \repeat unfold 4 { < b fis' >4 < b fis' > 8 } |
+  \repeat unfold 2 {
+    \repeat unfold 4 { < b fis' >4 < b fis' > 8 } |
+    < a e' >4 < a e' >8 < g d' >4 < g d' >8 |
+    < g d' >4 < g d' >8 < fis cis' >4 < fis cis' > 8 |
+  }
+  < b' fis' b >2.~ |
+  < b fis' b >~ |
+  < b fis' b >~ |
+  < b fis' b > |
 
-
-
-
-
-
-
-
+  g8 d' g a, e' a |
+  < b, fis' b >2.~ |
+  < b fis' b > |
+  g8 d' g a, e' a |
+  \barNumberCheck #103
+  \repeat unfold 4 { < b, fis' >4 < b fis' > 8 } |
+  < g, g' >2. |
+  \repeat unfold 3 {
+    < a a' >4. < b b' > |
+    < g g' >2. |
+  }
+  \repeat unfold 4 { < b fis' >4 < b fis' > 8 } |
+  \repeat unfold 2 {
+    \repeat unfold 4 { b8 fis' b } |
+    a, e' a
+    \repeat unfold 2 { g, d' g }
+    fis, cis' fis |
+  }
+  \repeat unfold 6 { < b, fis' >4 < b fis' > 8 } |
+  < b fis' >2. \bar "|."
 }
 
 pianoDynamics = {
@@ -434,9 +514,38 @@ myChords= \chordmode {
       \new DrumStaff = "metronome" {
         \drummode {
           \global
-          \repeat unfold 61 {
-            hiwoodblock4 lowoodblock wbl wbl wbl wbl
+          \repeat unfold 25 {
+            hiwoodblock4. lowoodblock
           }
+          \barNumberCheck #26
+          \time 3/8
+          hiwoodblock4.
+          \time 6/8
+          \repeat unfold 9 {
+            hiwoodblock4. lowoodblock
+          }
+          \barNumberCheck #36
+          \time 3/8
+          hiwoodblock4.
+          \time 6/8
+          \repeat unfold 28 {
+            hiwoodblock4. lowoodblock
+          }
+          \barNumberCheck #65
+          \time 3/8
+          hiwoodblock4.
+          \time 6/8
+          \repeat unfold 9 {
+            hiwoodblock4. lowoodblock
+          }
+          \barNumberCheck #75
+          \time 3/8
+          hiwoodblock4.
+          \time 6/8
+          \repeat unfold 50 {
+            hiwoodblock4. lowoodblock
+          }
+          \barNumberCheck #126
         }
       }
       % instrument end metronome
