@@ -52,6 +52,35 @@ voiceStaff= \transpose d \voicetrainerKey \relative c'' {
   \barNumberCheck #37
   \time 6/8
   b4 r2 |
+  r4. d8 e fis |
+  g4. fis |
+  e d |
+  g8 g g fis e d |
+  b4. r4 d8 |
+  g4. fis |
+  e d4 d8 |
+  g8 g16 g8 g16 fis8 e d |
+  b4 r8 b cis cis~ |
+  cis b4 r4. |
+  \barNumberCheck #48
+  \repeat unfold 9 r2. |
+  \barNumberCheck #57
+  r4. r4 r16 b' |
+  b8 b b16 b b8 fis4 |
+  b8 b16 b8 b16 b8. r8 b16 |
+  b8 a16 a8 a16 a8 fis( e16) e |
+  e8 fis16 e8 d16 b4 r8 |
+
+  b'8 b b16 b b8 fis4 |
+  b8 b16 b8 b16 b8. r |
+  b8 a16 a8 a16 a8( fis) e16 e |
+  \time 3/8
+  e8 fis16 e8 d16 |
+  \time 6/8
+  b4 r2 |
+
+
+
 }
 
 cello= \transpose d \voicetrainerKey \relative c, {
@@ -105,8 +134,46 @@ upperStaff= \transpose d \voicetrainerKey \relative c''' {
   \barNumberCheck #37
   \time 6/8
   b4. r |
-
-
+  r2. |
+  \repeat unfold 2 {
+    < d g >4. fis |
+    < a, e' > < b d > |
+  }
+  < d g > fis |
+  < a, e' > < b fis' > |
+  < d g > a' |
+  b2. |
+  r |
+  \barNumberCheck #48
+  \repeat unfold 2 {
+    b8 cis d cis b a |
+    b fis4~ fis d8 |
+  }
+  \alternative {
+    {
+      e d b d cis a |
+      g4. fis |
+    }
+    {
+      e'8 d b' d cis a |
+      g4. fis |
+    }
+  }
+  \barNumberCheck #56
+  r2. |
+  r |
+  < b, fis' > |
+  < d g > |
+  < b' b' >4. < a a' >4 e'8 |
+  a4 e8 fis4. |
+  < fis, fis' >2. |
+  < g g' >4. b16 a g4 |
+  < b b' >4. < a a' >4 e'8 |
+  \time 3/8
+  a4 e8 |
+  \time 6/8
+  fis4. r |
+  r2. |
 }
 
 lowerStaff= \transpose d \voicetrainerKey \relative c' {
@@ -147,6 +214,33 @@ lowerStaff= \transpose d \voicetrainerKey \relative c' {
   }
   \time 6/8
   \barNumberCheck #37
+  \repeat unfold 4 { < b fis' >4 < b fis' >8 } |
+  \repeat unfold 3 {
+    g2. |
+    a4. b |
+  }
+  g2. |
+  \repeat unfold 4 { < b fis' >4 < b fis' >8 } |
+  \barNumberCheck #48
+  \repeat unfold 2 {
+    \repeat unfold 4 { < b fis' >4 < b fis' >8 } |
+    < a e' >4 < a e' >8 < g d' >4 < g d' >8 |
+    < g d' >4 < g d' >8 < fis cis' >4 < fis cis' >8 |
+  }
+  \barNumberCheck #56
+  \repeat unfold 6 { < b fis' >4 < b fis' >8 } |
+  \repeat unfold 2 { < d g >4 < d g >8 } |
+  < a e' >4 < a e' >8 < g d' >4 < g d' >8 |
+  < a e' >4 < a e' >8
+  \repeat unfold 3 { < b fis' >4 < b fis' >8 } |
+  \repeat unfold 2 { < d g >4 < d g >8 } |
+  < a e' >4 < a e' >8 < g d' >4 < g d' >8 |
+  \time 3/8
+  < a e' >4 < a e' >8 |
+  \time 6/8
+  \repeat unfold 4 { < b fis' >4 < b fis' >8 } |
+
+
 
 
 
@@ -187,6 +281,28 @@ myChords= \chordmode {
           he ligh -- tens the bea -- con, light at the end of world
           sho -- wing the way, ligh -- ting hope in their hearts
           the ones and their tra -- vels home -- wards from a -- far
+
+          this is for long for -- got -- ten light at the end of the world
+          ho -- ri -- zon's cry -- ing the tears he left be -- hind long a -- go
+          so long a -- go
+
+          the al -- ba -- tross is fly -- ing, ma -- king him day -- dream
+          the time be -- fore he be -- came one of the world's un -- seen
+          Prin -- cess in a to -- wer, chil -- dren in the fields
+          life gave him it all, an is -- land of the uni -- verse
+
+          now his love's a me -- mory, a ghost in the fog
+          he sets the sails one last time say -- ing fare -- well to the world
+          an -- chor to the wa -- ter, sea -- bed far be -- low
+          grass still in his feet, and a smile be -- neath his brow
+
+          this is for long for -- got -- ten light at the end of the world
+          ho -- ri -- zon's cry -- ing the tears he left be -- hind long a -- go
+          so long a -- go
+
+          this is for long for -- got -- ten light at the end of the world
+          ho -- ri -- zon's cry -- ing the tears he left be -- hind long a -- go
+          so long a -- go
         }
       >>
       % instrument end voice
