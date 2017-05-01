@@ -78,6 +78,25 @@ voiceStaff= \transpose d \voicetrainerKey \relative c'' {
   e8 fis16 e8 d16 |
   \time 6/8
   b4 r2 |
+  r2. |
+
+  \barNumberCheck #68
+  b'8 b b16 b b8 fis4 |
+  b8 b16 b8 b16 b8. r8 b16 |
+  b8 a16 a8 a16 a8 fis e16 e |
+  e8 fis16 e8 d16 b4 r8 |
+
+  \barNumberCheck #72
+  b'8 b b16 b b8 fis4 |
+  b8 b16 b8 b16 b8. r8. |
+  b8 a16 a8 a16 a8( fis) e16 e |
+  \time 3/8
+  \barNumberCheck #75
+  e8 fis16 e8 d16 |
+  \time 6/8
+  b4 r2 |
+  \barNumberCheck #77
+
 
 
 
@@ -174,6 +193,24 @@ upperStaff= \transpose d \voicetrainerKey \relative c''' {
   \time 6/8
   fis4. r |
   r2. |
+  \repeat unfold 2 {
+    < d, d' >4. < cis cis' > |
+    < e e' > < d d' > |
+    < b' b' > < a a' > |
+  }
+  \alternative {
+    { < e e' >4 < e e' >8 < fis fis' >4. | }
+    {
+      \time 3/8
+      < e e' >4 < e e' >8 |
+    }
+  }
+  \time 6/8
+  < fis fis' >4. r |
+  r2. |
+  \barNumberCheck #78
+
+
 }
 
 lowerStaff= \transpose d \voicetrainerKey \relative c' {
@@ -239,6 +276,22 @@ lowerStaff= \transpose d \voicetrainerKey \relative c' {
   < a e' >4 < a e' >8 |
   \time 6/8
   \repeat unfold 4 { < b fis' >4 < b fis' >8 } |
+  \barNumberCheck #68
+  \repeat unfold 2 { b,8 fis' b } |
+  \repeat unfold 2 { g d' g } |
+  a,, e' a g, d' g |
+  a, e' a
+  \repeat unfold 3 { b, fis' b } |
+  \repeat unfold 2 { g d' g } |
+  a,, e' a g, d' g |
+  \time 3/8
+  a, e' a
+  \time 6/8
+  \repeat unfold 4 { b, fis' b } |
+  < g, g' >2. |
+  \barNumberCheck #79
+
+
 
 
 
